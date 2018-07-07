@@ -1,0 +1,53 @@
+if(v.checkNull(s))
+	if(v.checkName(cus.getName()))
+		if(v.checkPinCode(cus.getPin_code()))
+			if(v.checkEmailFormat(cus.getEmail()))
+				if(v.checkRecordStatus(cus.getRecordStatus()))
+					if(v.checkFlag(cus.getFlag()))
+						if(v.checkContact(cus.getContact_number()))
+							if(v.code(cus.getCode()))	
+							{
+							    System.out.println("All values are true");	
+							}
+							else
+							{
+							out.write("Error in Code");
+                                                        out.flush();
+							}
+						else
+                                                {
+						out.write("error in contact number");
+                                                out.flush();
+                                                }
+					else
+					out.write("Error in flag");
+				else
+				out.write("Error in Record Status");
+			else
+                        {
+                             for(int i = 0;i<s.length;i++)
+		 {						 
+			 out.write(s[i]);
+			 out.write(" ");			 
+		 }
+		 out.append(System.lineSeparator()); 
+			out.write("Error in Email Format");
+                         out.append(System.lineSeparator()); 
+                        out.flush();
+                        }
+		else
+                {
+                    for(int i = 0;i<s.length;i++)
+		 {						 
+			 out.write(s[i]);
+			 out.write(" ");			 
+		 }
+		 out.append(System.lineSeparator()); 
+		 out.write("Error in pin code");
+                 out.append(System.lineSeparator()); 
+                 out.flush();
+                }
+	else
+	out.write("Error in Name");
+else
+ out.write("Missing value");		
